@@ -1,0 +1,35 @@
+interface_string:
+  type: "string"
+  default: ""
+
+calendar_url:
+  type: "string"
+  default: "/calendar"
+
+shutter_name:
+  type: "string"
+  default: "Shutter Users"
+
+shutter_status:
+  type: "bool"
+  default: false
+
+shutter_last_seen:
+  type: "string"
+  default: ""
+
+updated_date:
+  type: "string"
+  default: ""
+
+tool_links:
+  default: >-
+    [{"Display Name":"Laser","Interface Name":"Laser Users","Last Seen Date":"","Status":""}, 
+    {"Display Name":"Wood Workshop","Interface Name":"Wood Workshop (Foundation)","Last Seen Date":"","Status":""},
+    {"Display Name":"Metal Lathe","Interface Name":"Metal Lathe","Last Seen Date":"","Status":""},
+    {"Display Name":"Mini CNC","Interface Name":"Mini CNC","Last Seen Date":"","Status":""},
+    {"Display Name":"MIG Welder","Interface Name":"MIG Welder","Last Seen Date":"","Status":""},
+    {"Display Name":"Wood Lathe","Interface Name":"Wood Lathe (Faceplate turning)","Last Seen Date":"","Status":""},
+    {"Display Name":"Table Saw","Interface Name":"Table Saw","Last Seen Date":"","Status":""},
+    {"Display Name":"Table CNC","Interface Name":"Table CNC","Last Seen Date":"","Status":""}]
+  json_schema: '{ "type": "array", "format": "table", "uniqueItems": true, "items": { "type": "object", "properties": { "Display Name": { "type": "string", "minLength": 1 }, "Interface Name": { "type": "string", "minLength": 1 }, "Last Seen Date": { "type": "string", "format":"datetime-local" }, "Status": { "type": "boolean", "format": "checkbox" } }, "additionalProperties": false } }'
